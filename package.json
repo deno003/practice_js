@@ -1,0 +1,11 @@
+{
+  "name": "practice_project01",
+  "version": "1.0.0",
+  "description": "js練習用のproject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deno_etml",
+  "license": "ISC"
+}
