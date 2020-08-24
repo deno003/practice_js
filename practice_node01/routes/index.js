@@ -5,7 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { 
     title: 'Express',
-    link:{href:'/page01', text:'page01'} });
+    link:{href:'/page01', text:'page01',
+          href2:'/page02', text2:'page02'}});
 });
 
 module.exports = router;
