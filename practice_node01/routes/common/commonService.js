@@ -7,7 +7,7 @@ const url = 'https://api.github.com/users/';
     GitHubのUser情報を取得する
     @pram userId
 */
-const getGitHubUserInfo = async() => {
+module.exports.getGitHubUserInfo = async() => {
 
     try{
         const gitHubUserId = 'deno003';
@@ -24,7 +24,7 @@ const getGitHubUserInfo = async() => {
     特殊文字を置換する
     @param str
 */
-const escapeSpecialChars = async(str) => {
+module.exports.escapeSpecialChars = async(str) => {
     return str
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -37,7 +37,7 @@ const escapeSpecialChars = async(str) => {
     ファイルを読み込む
     @param filepath
 */
-const readFile = (filePath) => {
+module.exports.readFile = (filePath) => {
     // ファイル読み込み
     const mdFile = fs.readFile(filePath, { encoding: "utf8" }, (err, file) => {
         if(err){
@@ -54,14 +54,6 @@ const readFile = (filePath) => {
     mdをhtmlに変換する
     @param md
 */
-const convertMdToHtml = async(md) => {
+module.exports.convertMdToHtml = async(md) => {
     return marked(md);
 }
-
-
-module.exports = {
-    getGitHubUserInfo,
-    escapeSpecialChars,
-    readFile,
-    convertMdToHtml
-};
