@@ -1,0 +1,35 @@
+<html lang=ja>
+    <head>
+        <meta charset="utf-8" />
+        <title>Todo App</title>
+        <!-- CSSファイル読込 -->
+        <link 
+            href="https://jsprimer.net/use-case/todoapp/final/final/index.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- class属性をCSSのために指定 -->
+        <div class="todoapp">
+            <!-- id属性をjavaScpritのために指定 -->
+            <form id="js-form">
+                <input
+                    id="js-form-input"
+                    class="new-todo"
+                    type="next"
+                    placeholder="What need to be done?"
+                    autocomplete="off"
+                />
+            </form>
+            <!-- TodoアプリのメインとなるTodoリスト -->
+            <div id="js-todo-list" class="todo-list">
+                <!-- 動的に更新されるTodoリスト -->
+            </div>
+            <footer class="footer">
+                <!-- Todoアイテム数の表示 -->
+                <span id="js-todo-count">Todoアイテム数: 0</span>
+            </footer>
+        </div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
